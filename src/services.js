@@ -27,6 +27,7 @@ async function printCharacter() {
         <p>${character.name}</p>
         <p>${character.house}</p>
         <p>${character.age}</p>
+        <button onclick="deleteCharacter"(${character.id})">Delete</button>
     </li>`
     })
 }
@@ -44,7 +45,7 @@ async function deleteCharacter(id) {
     const response = await fetch (URL_API + `/${id}` , {
         method: 'DELETE',
         headers: {
-            "Conten-Type": "application/json",
+            "Content-Type": "application/json",
         },
     })
     const deletedCharacter = await response.json()
