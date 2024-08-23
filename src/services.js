@@ -5,9 +5,7 @@ async function createCharacter() {
     
 }
 
-
 //READ Method: GET
-
 async function getAllCharacters() {
     const response = await fetch (URL_API, {
         method: 'GET',
@@ -42,8 +40,15 @@ async function updateCharacter() {
 
 //DELETE Method: DELETE
 
-async function deleteCharacter() {
-    
+async function deleteCharacter(id) {
+    const response = await fetch (URL_API + `/${id}` , {
+        method: 'DELETE',
+        headers: {
+            "Conten-Type": "application/json",
+        },
+    })
+    const deletedCharacter = await response.json()
+    return deletedCharacter 
 }
 
 //RENDER Function
