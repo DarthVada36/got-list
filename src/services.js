@@ -20,8 +20,8 @@ async function getAllCharacters() {
 const listTag = document.getElementById('charactersList')
 
 async function printCharacter() {
-    const characters = await getAllCharacters() 
-    characters.map((character) => {
+     const characters = await getAllCharacters() 
+     characters.map((character) => {
         listTag.innerHTML += `<li>
         <p>${character.name}</p>
         <p>${character.id}</p>
@@ -29,7 +29,7 @@ async function printCharacter() {
         <p>${character.age}</p>
         <button onclick= "deleteCharacter(${character.id})">Delete</button>
         </li>`
-    })
+     })
 }
     printCharacter()
 
