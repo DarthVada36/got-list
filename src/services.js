@@ -1,4 +1,4 @@
-const URL_API = "http://localhost:8000/character"
+const URL_API = "http://localhost:8000/characters"
 
 // CREATE METHOD : (POST)
 async function createCharacter() {
@@ -49,4 +49,4 @@ async function deleteCharacter(id) {
     })
     const deletedCharacter = await response.json()
     return deletedCharacter
-} 
+}

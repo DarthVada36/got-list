@@ -1,37 +1,37 @@
 {
     "characters": [
         {
-            "id": "01",
+            "id": "1",
             "name": "Jon Snow",
             "house": "Stark",
             "age": "26"
         },
         {
-            "id": "02",
+            "id": "2",
             "name": "Daenerys Targaryen",
             "house": "Targaryen",
             "age": "25"
         },
         {
-            "id": "03",
+            "id": "3",
             "name": "Tyrion Lannister",
             "house": "Lannister",
             "age": "32"
         },
         {
-            "id": "04",
+            "id": "4",
             "name": "Arya Stark",
             "house": "Stark",
             "age": "18"
         },
         {
-            "id": "05",
+            "id": "5",
             "name": "Cersei Lannister",
             "house": "Lannister",
             "age": "42"
         },
         {
-            "id": "06",
+            "id": "6",
             "name": "Brienne of Tarth",
             "house": "Tarth",
             "age": "32"
