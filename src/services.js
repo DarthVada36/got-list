@@ -1,55 +1,52 @@
-const URL_API = "http://localhost:3000/characters"
+const URL_API = "http://localhost:8000/character"
 
-//CREATE Method: POST
+// CREATE METHOD : (POST)
 async function createCharacter() {
-    
-}
 
-//READ Method: GET
+}
+// READ METHOD : (GET)
 async function getAllCharacters() {
-    const response = await fetch (URL_API, {
+    const response = await fetch(URL_API, {
         method: 'GET',
         headers: {
-            "Content-Type": "application/json",       
-        },
+            "Content-Type": "application/json",
+        }, 
     })
-    const characters = await response.json () //pasar datos a formato json
-    return characters
+    const data = await response.json() //pasar datos a formato json
+    return data
+
 }
 
-const listTag = document.getElementById ('charactersList')
+const listTag = document.getElementById('charactersList')
 
 async function printCharacter() {
-    const characters = await getAllCharacters()
+    const characters = await getAllCharacters() 
     characters.map((character) => {
         listTag.innerHTML += `<li>
-        <p>${character.id}</p>
         <p>${character.name}</p>
+        <p>${character.id}</p>
         <p>${character.house}</p>
         <p>${character.age}</p>
-        <button onclick="deleteCharacter"(${character.id})">Delete</button>
-    </li>`
+        <button onclick= "deleteCharacter(${character.id})">Delete</button>
+        </li>`
     })
 }
+    printCharacter()
 
-printCharacter()
-
-//UPDATE Method: EDIT
+// UPDATE METHOD : (PUT)
 async function updateCharacter() {
     
 }
 
-//DELETE Method: DELETE
+// DELETE METHOD : (DELETE)
 
 async function deleteCharacter(id) {
-    const response = await fetch (URL_API + `/${id}` , {
+    const response = await fetch(URL_API + `/${id}` , { 
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
         },
     })
     const deletedCharacter = await response.json()
-    return deletedCharacter 
-}
-
-//RENDER Function
+    return deletedCharacter
+} 
